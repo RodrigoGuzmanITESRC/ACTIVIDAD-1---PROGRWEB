@@ -1,0 +1,30 @@
+﻿@model ACTIVIDAD_2___PROGRWEB.Models.PromedioViewModel
+<html>
+<head>
+    <title>Promedio</title>
+ 
+</head>
+<body>
+    <h1>Promedio</h1>
+
+    <form method="post" action="~/Home/Index">
+
+        <label>Calificación 1:</label>
+        <input type="number" name="c1" value="@Model.Calificacion1" /><br />
+        <label>Calificación 2:</label>
+        <input type="number" name="c2" value="@Model.Calificacion2" /><br />
+        <label>Calificación 3:</label>
+        <input type="number" name="c3" value="@Model.Calificacion3" /><br />
+
+
+        <input type="submit" value="Promediar" /><br />
+        <label>Resultado:</label>
+        <input type="number" readonly value="@Model.Promedio" />
+
+        <label>Estado de alumno:</label>
+        <input type="text" readonly value="@Model.EstadoDelAlumno()" />
+    </form>
+
+
+</body>
+</html>
